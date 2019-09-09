@@ -1,0 +1,256 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS Utilities CSS Documentation:
+----------------------------------------------------------------
+1.0 Clearing
+2.0 Centering Layout
+3.0 Component
+4.0 Margin
+--------------------------------------------------------------*/
+
+// 1.0 Clearing
+.clearfix:after, .clearfix:before,
+.row:after,
+.row:before {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after,
+.row:after {
+  clear: both;
+}
+
+// 2.0 Centering 
+
+.centerElement{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.valign{
+  display: flex;
+  align-items: center;
+}
+
+.display-table {
+	display: table;
+  width: 100%;
+  height: 100%;
+	position: relative;
+	z-index: 1;
+}
+.display-center {
+	display: table-cell;
+	vertical-align: middle;
+	// text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  text-align: center;
+}
+
+.container__full{
+  height: 100%;
+}
+
+// 3.0 Component
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 40px;
+  border-radius: 20px;
+  @include transition(0.5s);
+
+  &__blue{
+    background: $blue;
+    color: $white;
+    box-shadow: 0px 0px 5px 2px rgba(0, 83, 255, 0.5);
+    @include base_position_y(0);
+    
+    &:hover{
+      box-shadow: 0px 0px 20px 2px rgba(0, 83, 255, 0.5);
+      // @include base_position_y(-5px);
+    }
+  }
+}
+
+a{
+  @include base_transition(all);
+}
+
+// 3.1 Scroll Down
+#scrollMouse {
+  bottom: 30px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 25px;
+}
+@media (max-width: 768px) {
+  #scrollMouse {
+    bottom: 10px;
+  }
+}
+#scrollMouse .wheel {
+  height: 9px;
+  width: 1px;
+  display: block;
+  margin: 5px auto;
+  background: $blue;
+  position: relative;
+}
+#scrollMouse .wheel {
+  -webkit-animation: mouse-wheel 1.2s ease infinite;
+  -moz-animation: mouse-wheel 1.2s ease infinite;
+}
+#scrollMouse span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 1px solid $blue;
+  border-bottom: 1px solid $blue;
+  margin: 0px auto;
+}
+#scrollMouse .unu {
+  margin-top: 3px;
+}
+#scrollMouse .unu,
+#scrollMouse .doi,
+#scrollMouse .trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+}
+#scrollMouse .unu {
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+}
+#scrollMouse .doi {
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+}
+#scrollMouse .trei {
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+}
+#scrollMouse .mouse {
+  height: 40px;
+  width: 25px;
+  border-radius: 15px;
+  -webkit-transform: none;
+  transform: none;
+  border: 1.5px solid #0053FF;
+}
+@-webkit-keyframes mouse-wheel {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+@-moz-keyframes mouse-wheel {
+  0% {
+    top: 1px;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// 4.0 Margin
+
+.mt1{margin-top: 10px};
+.mt2{margin-top: 20px};
+.mt3{margin-top: 30px};

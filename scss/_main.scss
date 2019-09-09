@@ -1,0 +1,677 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS Main CSS Documentation:
+----------------------------------------------------------------
+0.0 Main Utilities
+1.0 Cover
+  1.1 Header 
+2.0 Services
+
+--------------------------------------------------------------*/
+// MAIN UTILITIES
+body{
+  color: $mainblack;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+p{
+  font-size: 1.2em;
+}
+
+.page{
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+
+  &__title{
+    position: relative;
+    margin: 50px auto;
+    
+    @include max-responsive($sm){
+      text-align: center;
+    }
+
+    h1{
+      position: relative;
+      z-index: 10;
+      font-size: 3em;
+      
+      @include max-responsive($sm){
+        font-size: 2em;
+      }
+    }
+
+    p{
+      font-size: 1.2em;
+      margin: 20px auto;
+    }
+  }
+
+  &__half{
+    min-height: 70vh;
+  }
+}
+
+.shadowTitle{
+  color: #F8F8F8;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  @include max-responsive($sm){
+    font-size: 4.5em;
+  }
+  
+  &__1{
+    font-size: 8em;
+    z-index: -1;
+    top: -80px;
+    @include max-responsive($sm){
+      top: -30px;
+      font-size: 4.5em;
+    }
+  }
+  
+  &__2{
+    font-size: 13em;
+    top: -70px;
+    left: -100px;
+    @include max-responsive($sm){
+      font-size: 4.5em;
+    }
+  }
+  
+  &__3{
+    font-size: 12em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #f2f4f9;
+    z-index: 0;
+    top: 80px;
+
+    @include max-responsive($sm){
+      font-size: 4.5em;
+    }
+  }
+
+  &__4{
+    font-size: 12em;
+    bottom: 10px;
+    color: #f2f4f9;
+    z-index: -1;
+
+    @include max-responsive($sm){
+      font-size: 4.5em;
+    }
+  }
+
+  &__5{
+    font-size: 12em;
+    left: 0;
+    color: #f2f4f9;
+    z-index: 0;
+    top: 50%;
+
+    @include max-responsive($sm){
+      font-size: 4.5em;
+      top: 105%;
+    }
+  }
+  
+  &__6{
+    font-size: 12em;
+    left: 0;
+    color: #f2f4f9;
+    z-index: 0;
+    top: 70%;
+
+    @include max-responsive($sm){
+      font-size: 4.5em;
+      top: 105%;
+    }
+  }
+}
+
+.wave{
+  position: absolute;
+  width: 100%;
+  
+  img{
+    width: 100%;
+  }
+  
+  &__top{
+    // z-index: -1;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__bottom{
+    top: 0;
+    // position: relative;
+  }
+}
+
+// 1.0 COVER
+.cover{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+
+  .header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .navigation{
+      text-align: right;
+      padding-top: 10px;
+
+      @include max-responsive($sm){
+        display: none;
+      }
+
+      ul{
+
+        li{
+          margin: 5px 15px;
+
+          a{
+            color: $white;
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+  }
+
+  .ornamen{
+    
+    &__top{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+
+      img{
+        float: right;
+      }
+    }
+  }
+
+  .content{
+    height: 80%;
+
+    .tagline{
+      position: relative;
+      color: $mainblack;
+      text-align: left;
+
+      h1{
+        font-weight: 400;
+        font-size: 2.5em;
+
+        span{
+          font-weight: bold;
+        }
+      }
+
+      p{
+        margin: 30px auto;
+        font-size: 1.5em;
+
+        @include max-responsive($sm){
+          margin: 10px auto;
+        }
+      }
+    }
+
+    .valign{
+      @include max-responsive($sm){
+        display: block;
+      }
+    }    
+  }
+
+  .social{
+    position: absolute;
+    bottom: 40px;
+    z-index: 10;
+  }  
+}
+
+// 2.0 SERVICE
+.service{
+  position: relative;
+  min-height: 100vh;
+  background: $lightblue;
+  // padding: 0;
+
+  .item{
+    margin: 20px auto;
+    width: 280px;
+    background: $white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ebebeb;
+    transform: translateY(0px);
+    @include transition(0.5s);
+
+
+    @include max-responsive($sm){
+      width: auto;
+    }
+    
+    &:hover{
+      // box-shadow: 0px 0px 20px #e1e0e0;
+      box-shadow: 0 30px 20px -17px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+      transform: translateY(-7px);
+      cursor: pointer;
+    }
+
+    &__images{
+      width: 200px;
+      margin: auto;
+      height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title{
+      font-weight: bold;
+      font-size: 1.5em;
+      margin: 20px auto;
+      font-family: $font_2;
+    }
+  }
+} 
+
+// 3.0 ABOUT
+.about{
+  background: $white;
+  padding: 0;
+  min-height: 90vh;
+
+  .page__title{
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 25px;
+      right: 80px;
+      height: 3px;
+      width: 110px;
+      background: $blue;
+    }
+  }
+}
+
+// 4.0 CASE STUDY
+.case-study{
+  background: $lightblue;
+
+  .page__title{
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 55px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 3px;
+      width: 110px;
+      background: #0053FF;
+    }
+  }
+
+  .project{
+    overflow: visible;
+
+    &__item{
+      width: calc(100% + 30px);
+      transform: scale(0.8);
+      // transform .6s cubic-bezier(.3,.1,.05,1),opacity .4s cubic-bezier(.3,.1,.05,1);
+      @include transition(0.5s);
+      
+      &:focus{
+        outline: none !important;
+      }
+      
+      &:hover{
+        // transform: scale(1);
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+    }
+    
+    &__images{
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 15px 20px -17px rgba(50, 50, 93, 0.25), 0px 10px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    }
+
+    &__title{
+      margin-top: 20px;
+
+      h3{
+        font-size: 1.5em;
+        margin: 10px auto;
+      }
+
+      p{
+        font-size: 14px;
+      }
+    }
+    
+    .slick-slide.slick-current.slick-active.slick-center{
+      transform: scale(1);      
+    }
+
+    .slick-dots{
+      bottom: -60px;
+      
+      li button:before{
+        font-size: 13px;
+        color: $blue;
+      }
+    }
+
+    .slick-prev:before, .slick-next:before{
+      color: $blue;
+      font-size: 40px;
+    }
+
+    .slick-next{
+      right: -4%;
+    }
+
+    .slick-prev{
+      left: -4%;
+    }
+  }
+}
+
+// 5.0 TESTIMONIAL - CLIENT
+.testimonials{
+
+  .page__title{
+    position: absolute;
+    width: 45%;
+
+    @include max-responsive($sm){
+      width: 100%;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 260px;
+      height: 3px;
+      width: 110px;
+      background: $blue;
+    }
+
+    &.client{
+      position: relative;
+      width: 100%;
+      text-align: center;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 55px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 3px;
+        width: 110px;
+        background: #0053FF;
+      }
+    }
+  }
+
+  .shadowTitle{
+    top: 55px;    
+  }
+
+  .client-list{
+
+    ul{
+      margin: auto;
+      text-align: center;
+    }
+
+    .item{
+      width: 15%;
+    }
+  }
+
+  .shape{
+    position: relative;
+
+  }
+}
+
+// 6.0 STORIES
+.story{
+  background: $lightblue;
+  padding: 0;
+
+  .page__title{
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 150px;
+      height: 3px;
+      width: 80px;
+      background: #0053FF;
+    }
+  }
+
+  .stories{
+    position: relative;
+    
+    &__item{
+      width: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      margin: 10px;
+      box-shadow: 0px 6px 10px 0px rgba(90,90,90,0.2);
+
+      @include max-responsive($sm){
+        // width: 200px !important;
+      }
+    }
+
+    &__images{
+      height: 160px;
+      overflow: hidden;
+    }
+
+    &__content{
+      padding: 20px;
+
+      .label{
+        color: white;
+        padding: 5px 20px;
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 13px;
+        box-shadow: 0px 4px 10px #cccccc;
+
+        &__blue{
+          background: $blue;
+        }
+
+        &__yellow{
+          background: $yellow;
+        }
+      }
+      
+      .title {
+        font-size: 1.5em;
+        margin: 15px auto;
+        font-weight: bold;
+      }
+      
+      .author {
+        margin: 20px auto 5px;
+        
+        &__img {
+          width: 30px;
+          float: left;
+          margin: -5px 15px auto 0px;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: 0px 4px 10px #cccccc;
+        }
+      }
+    }
+
+    .slick-prev:before, .slick-next:before{
+      color: $blue;
+      font-size: 40px;
+    }
+
+    .slick-dots{
+      bottom: -60px;
+      
+      li button:before{
+        font-size: 13px;
+        color: $blue;
+      }
+    }
+  }
+
+  .slick-list {
+    padding-left: 0px!important; 
+  }
+
+}
+
+// 7.0 CONTACT
+.contact{
+
+  .shadowTitle{
+    font-size: 11em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #f7f9fd;
+    z-index: -1;
+    top: 10px;
+  }
+
+  .page__title{
+    &:after{
+      content: '';
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 3px;
+      width: 80px;
+      background: #0053FF;
+    }
+  }
+
+  &__form{
+    background: $white;
+    padding: 30px;
+    box-shadow: 0px 10px 30px #ececec;
+    border-radius: 10px;
+
+    &::after{
+      content: url(../images/svg/dots.svg);
+      position: absolute;
+      bottom: -55px;
+      right: -70px;;
+      z-index: 2;
+    }
+
+    .form__field{
+      margin: 10px auto 20px;
+
+      .control{        
+        border: 0;
+        outline: 0;
+        border-bottom: 1px solid #9C9C9C;
+        color: $mainblack;
+        display: block;
+        width: 100%;
+        background: transparent;
+        padding: 10px;
+        background-clip: padding-box;
+        margin: 10px auto;
+      }
+    }
+
+  }
+}
+
+// 8.0 FOOTER
+footer{
+  position: relative;
+  background: $lightblue;
+
+  .brand{
+    float: left;
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .logo{
+      width: 190px;
+    }
+  }
+
+  .details{
+    float: left;
+    width: 75%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .subinfo{
+
+      .item{
+        float: left;
+        width: 25%;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &__title{
+          font-size: 1.6em;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+
+        &__desc{
+
+          li{
+            display: block;
+            margin: 10px auto;
+
+            a{
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

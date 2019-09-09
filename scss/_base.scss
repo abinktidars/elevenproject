@@ -1,0 +1,137 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS BASE CSS Documentation:
+----------------------------------------------------------------
+1.0 Color Base
+	1.1 Font Color
+  1.2 Social Color
+  1.3 Gradient
+2.0 Font
+3.0 Media Query
+  3.1 Grid
+4.0 Animation
+  4.1 Scale
+  4.2 Position
+5.0 Utilities
+  5.1 Border
+  5.2 Clearing
+
+--------------------------------------------------------------*/
+
+// 1.0 Color Base
+$white: #ffffff;
+$lightwhite: #c1c0c0;
+$black: #000000;
+$bg_base: #ffffff;
+$bg_1: #4c8ae7;
+$bg_none: none !important;
+
+
+//1.3 Gradient Color
+@mixin bg-black {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+// 1.4 Theme Color
+$mainblack: #4C4C4C;
+$yellow: #F7CE00;
+$blue: #0053FF;
+$lightblue: #fbfcff;
+
+
+// 2.0 Font
+// $font_body: "Poppins", sans-serif;
+$font_body: "proxima_novaregular", sans-serif;
+$font_1: "Noto Sans", sans-serif;
+$font_2: "Poppins", sans-serif;
+
+// 2.1 Font Custom
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url('../fonts/proximanova-regular-webfont.woff2') format('woff2'),
+       url('../fonts/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+// 3.0 Media Query
+@mixin max-responsive($media) {
+  @media (max-width: $media) {
+    @content;
+  }
+}
+@mixin min-responsive($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+@mixin range-responsive($media, $media2) {
+  @media (min-width: $media) and (max-width: $media2) {
+    @content;
+  }
+}
+
+//3.1 Grid
+$xlg: 1400px;
+$lg: 1100px;
+$md: 992px;
+$sm: 768px;
+$xs: 360px;
+$xxs: 320px;
+
+// 4.0 Animation
+@mixin transition($t) {
+  -webkit-transition: all $t ease;
+  -moz-transition: all $t ease;
+  -ms-transition: all $t ease;
+  -o-transition: all $t ease;
+  transition: all $t ease;
+}
+
+@mixin base_transition($t) {
+  -webkit-transition: $t 0.2s ease;
+  -moz-transition: $t 0.2s ease;
+  -ms-transition: $t 0.2s ease;
+  -o-transition: $t 0.2s ease;
+  transition: $t 0.2s ease;
+}
+
+// 4.1 Scale
+@mixin base_scale($x) {
+  -ms-transform: scale($x);
+  -webkit-transform: scale($x);
+  transform: scale($x);
+}
+
+// 4.2 Position
+@mixin base_position($p) {
+  -ms-transform: translate($p);
+  -webkit-transform: translate($p);
+  transform: translate($p);
+}
+
+@mixin base_position_y($y) {
+  -ms-transform: translateY($y);
+  -webkit-transform: translateY($y);
+  transform: translateY($y);
+}
+
+// 5.0 Utilities
+
+// 5.1 Border Radius
+@mixin border_radius($x) {
+  -webkit-border-radius: $x;
+  -moz-border-radius: $x;
+  -ms-border-radius: $x;
+  -o-border-radius: $x;
+  border-radius: $x;
+}
+
+// 5.2 Clearing
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.33" height="46.33" viewBox="0 0 46.33 46.33">
+  <defs>
+    <filter id="XMLID_17_" x="0" y="0" width="46.33" height="46.33" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="instagram" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#XMLID_17_)">
+      <path id="XMLID_17_2" data-name="XMLID_17_" d="M19.89,0H8.44A8.449,8.449,0,0,0,0,8.44V19.89a8.449,8.449,0,0,0,8.44,8.44H19.89a8.449,8.449,0,0,0,8.44-8.44V8.44A8.449,8.449,0,0,0,19.89,0Zm5.59,19.89a5.59,5.59,0,0,1-5.59,5.59H8.44a5.59,5.59,0,0,1-5.59-5.59V8.44A5.59,5.59,0,0,1,8.44,2.85H19.89a5.59,5.59,0,0,1,5.59,5.59V19.89Z" transform="translate(9 6)" fill="#0053ff"/>
+    </g>
+    <path id="XMLID_81_" d="M140.327,133a7.327,7.327,0,1,0,7.327,7.327A7.335,7.335,0,0,0,140.327,133Zm0,11.8a4.477,4.477,0,1,1,4.477-4.477A4.477,4.477,0,0,1,140.327,144.8Z" transform="translate(-126.162 -126.162)" fill="#0053ff"/>
+    <ellipse id="XMLID_83_" cx="1.756" cy="1.756" rx="1.756" ry="1.756" transform="translate(19.75 5.137)" fill="#0053ff"/>
+  </g>
+</svg>
