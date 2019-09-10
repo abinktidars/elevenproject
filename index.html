@@ -16,6 +16,7 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -394,9 +395,26 @@
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Sequi, ipsa! Cum saepe</p>
         </div>  
         <div class="shape">
-          <img src="images/svg/testimonial-shape.svg" alt="">
+          <img src="images/svg/testimonial-shape.svg" alt="" class="shape__bg">
           <div class="shadowTitle shadowTitle__4">
               testimonials
+          </div>
+
+          <div class="sliderTestimonial">
+            <div class="item">
+              <div class="item__images">
+                <img src="images/testimonial-1.jpg" alt="">
+              </div>
+              <div class="item__speech">
+                <h2>"I have had a pleasant experience working with Eleven Digital. 
+                  Products made, have changed the views of customers 
+                  to be more comfortable and interactive"</h2>
+              </div>
+              <div class="item__profile">
+                <div class="item__profile--name">DAVID KURNIAWAN</div>
+                <div class="item__profile--pt">PT. Freeport Indonesia</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -430,6 +448,7 @@
       </div>
     </section>
 
+    <!-- Story -->
     <section class="page story valign">
       <!-- Wave Divider-->
       <div class="wave wave__bottom">
@@ -438,7 +457,7 @@
 
       <div class="container">
 
-        <div class="row">
+        <div class="row hidden-xs">
           <div class="col-lg-4">
             <div class="page__title">
               <h1>
@@ -472,7 +491,7 @@
                     </div>
                     <div class="author">
                       <span class="author__img">
-                        <img src="images/testimonial-1.png" alt="">
+                        <img src="images/testimonial-1.jpg" alt="">
                       </span>By The Manifest
                     </div>
                   </div>
@@ -498,7 +517,7 @@
                     </div>
                     <div class="author">
                       <span class="author__img">
-                        <img src="images/testimonial-2.png" alt="">
+                        <img src="images/testimonial-2.jpg" alt="">
                       </span>By The Manifest
                     </div>
                   </div>
@@ -523,7 +542,7 @@
                     </div>
                     <div class="author">
                       <span class="author__img">
-                        <img src="images/testimonial-3.png" alt="">
+                        <img src="images/testimonial-3.jpg" alt="">
                       </span>By The Manifest
                     </div>
                   </div>
@@ -548,7 +567,7 @@
                     </div>
                     <div class="author">
                       <span class="author__img">
-                        <img src="images/testimonial-4.png" alt="">
+                        <img src="images/testimonial-4.jpg" alt="">
                       </span>By The Manifest
                     </div>
                   </div>
@@ -610,77 +629,91 @@
     </section>
 
     <!-- Footer -->
-    <footer class="page__half valign">
+    <footer class="footer page__half valign">
       <!-- Wave Divider-->
       <div class="wave wave__bottom">
         <img src="images/wave-white-top.png" alt="">
       </div>
 
       <div class="container">
-        <div class="brand">
-          <div class="logo">
-            <img src="images/logo-eleven.png" alt="">
+        <div class="row footer__content">
+          <div class="col-lg-3">
+            <div class="brand">
+              <div class="logo">
+                <img src="images/logo-eleven.png" alt="">
+              </div>
+              <p>Partner your digital experience
+                  product and best solutions for 
+                  better transformation platform. </p>
+            </div>  
           </div>
-          <p>Partner your digital experience
-              product and best solutions for 
-              better transformation platform. </p>
+          <div class="col-lg-9">
+            <div class="details">
+              <div class="row subinfo">
+                <div class="col-lg-3 item">
+                  <div class="item__title">
+                    Contact Us
+                  </div>
+                  <div class="item__desc">
+                    <p>Jl. Kebon Jeruk Indah Utama 4
+                        West Jakarta - Indonesia
+                    </p>
+                    <p>+62 877 234 999 550</p>                
+                  </div>
+                </div>
+                <div class="col-lg-3 item">
+                  <div class="item__title">
+                    Web Development
+                  </div>
+                  <div class="item__desc">
+                    <ul>
+                      <li><a href="">Company Profile</a></li>
+                      <li><a href="">E-Commerce</a></li>
+                      <li><a href="">ERP System</a></li>
+                      <li><a href="">Reservation System</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 item">
+                  <div class="item__title">
+                    Graphic Design
+                  </div>
+                  <div class="item__desc">
+                    <ul>
+                      <li><a href="">Branding Design</a></li>
+                      <li><a href="">Wedding Invitation</a></li>
+                      <li><a href="">Name Card</a></li>
+                      <li><a href="">Poster - Banner Design</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 item">
+                  <div class="item__title">
+                    Digital Marketing
+                  </div>
+                  <div class="item__desc">
+                    <ul>
+                      <li><a href="">Social Media Strategic</a></li>
+                      <li><a href="">SEO Optimaliazation</a></li>
+                      <li><a href="">Advertising Banner</a></li>
+                      <li><a href="">Copywriter</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="details">
-          <div class="subinfo">
-            <div class="item">
-              <div class="item__title">
-                Contact Us
-              </div>
-              <div class="item__desc">
-                <p>Jl. Kebon Jeruk Indah Utama 4
-                    West Jakarta
-                    Indonesia
-                </p>
-                <p>+62 877 234 999 550</p>                
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__title">
-                Web Development
-              </div>
-              <div class="item__desc">
-                <ul>
-                  <li><a href="">Company Profile</a></li>
-                  <li><a href="">E-Commerce</a></li>
-                  <li><a href="">ERP System</a></li>
-                  <li><a href="">Reservation System</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__title">
-                Graphic Design
-              </div>
-              <div class="item__desc">
-                <ul>
-                  <li><a href="">Branding Design</a></li>
-                  <li><a href="">Wedding Invitation</a></li>
-                  <li><a href="">Name Card</a></li>
-                  <li><a href="">Poster - Banner Design</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__title">
-                Digital Marketing
-              </div>
-              <div class="item__desc">
-                <ul>
-                  <li><a href="">Social Media Strategic</a></li>
-                  <li><a href="">SEO Optimaliazation</a></li>
-                  <li><a href="">Advertising Banner</a></li>
-                  <li><a href="">Copywriter</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="copyright">
+            <p>Copyright 2019. Eleven All Right Reserved.</p>
         </div>
       </div>
+
+      <!-- <div class="copyright">
+        <div class="shape">
+          <img src="images/footer-left.png" alt="">
+        </div>        
+      </div> -->
     </footer>
 
     <!-- Plugin Js -->

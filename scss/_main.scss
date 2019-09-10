@@ -24,12 +24,13 @@ p{
 
 .page{
   position: relative;
-  min-height: 100vh;
-  padding: 20px;
+  padding-top: 50px;
+  // min-height: 100vh;
+  // padding: 20px;
 
   &__title{
     position: relative;
-    margin: 50px auto;
+    margin: 50px auto 50px;
     
     @include max-responsive($sm){
       text-align: center;
@@ -52,7 +53,7 @@ p{
   }
 
   &__half{
-    min-height: 70vh;
+    // min-height: 70vh;
   }
 }
 
@@ -95,6 +96,7 @@ p{
 
     @include max-responsive($sm){
       font-size: 4.5em;
+      top: 110%;
     }
   }
 
@@ -105,7 +107,7 @@ p{
     z-index: -1;
 
     @include max-responsive($sm){
-      font-size: 4.5em;
+      font-size: 3.7em;
     }
   }
 
@@ -137,7 +139,7 @@ p{
 }
 
 .wave{
-  position: absolute;
+  // position: absolute;
   width: 100%;
   
   img{
@@ -276,7 +278,7 @@ p{
       transform: translateY(-7px);
       cursor: pointer;
     }
-
+    
     &__images{
       width: 200px;
       margin: auto;
@@ -285,7 +287,7 @@ p{
       justify-content: center;
       align-items: center;
     }
-
+    
     &__title{
       font-weight: bold;
       font-size: 1.5em;
@@ -299,10 +301,10 @@ p{
 .about{
   background: $white;
   padding: 0;
-  min-height: 90vh;
-
+  // min-height: 90vh;
+  
   .page__title{
-
+    
     &:after{
       content: '';
       position: absolute;
@@ -311,6 +313,12 @@ p{
       height: 3px;
       width: 110px;
       background: $blue;
+      @include max-responsive($sm){
+        top: 75px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
   }
 }
@@ -331,6 +339,11 @@ p{
       height: 3px;
       width: 110px;
       background: #0053FF;
+
+      @include max-responsive($sm){
+        top: 38px;
+        width: 70px;
+      }
     }
   }
 
@@ -410,8 +423,9 @@ p{
 
     @include max-responsive($sm){
       width: 100%;
+      position: relative;
     }
-
+    
     &:after{
       content: '';
       position: absolute;
@@ -420,13 +434,21 @@ p{
       height: 3px;
       width: 110px;
       background: $blue;
+      
+      @include max-responsive($sm){
+        top: 38px;
+        width: 70px;
+        left: 0%;
+        right: 0;
+        margin: auto;
+      }
     }
-
+    
     &.client{
       position: relative;
       width: 100%;
       text-align: center;
-
+      
       &:after{
         content: '';
         position: absolute;
@@ -437,6 +459,11 @@ p{
         height: 3px;
         width: 110px;
         background: #0053FF;
+        
+        @include max-responsive($sm){
+          top: 38px;
+          width: 70px;
+        }
       }
     }
   }
@@ -454,12 +481,84 @@ p{
 
     .item{
       width: 15%;
+
+      @include max-responsive($sm){
+        width: 24%;
+        margin: 10px;
+      }
     }
   }
 
   .shape{
     position: relative;
 
+
+    &__bg{
+      @include max-responsive($sm){
+        position: absolute;
+      }
+    }
+
+
+    .sliderTestimonial {
+      position: absolute;
+      top: 200px;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      right: 0;
+
+      @include max-responsive($sm){
+        position: relative;
+        top: 0px;
+      }
+
+      .item{
+
+        &__images{
+          width: 180px;
+          border-radius: 50%;
+          box-shadow: 5px 5px 10px #ccc;
+          margin: auto;
+          overflow: hidden;
+
+          @include max-responsive($sm){
+            width: 110px;
+          }
+          
+        }
+        
+        &__speech{
+          margin: 30px auto;
+          width: 70%;  
+          font-family: $font_3;
+          
+          @include max-responsive($sm){
+            width: 100%;
+          }
+          
+          h2{
+            font-weight: normal;
+            line-height: 1.7;
+            @include max-responsive($sm){
+              font-size: 1.2em;
+            }
+          }
+        }
+
+        &__profile{
+
+          &--name{
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+          }
+          &--pt{
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -485,7 +584,7 @@ p{
     position: relative;
     
     &__item{
-      width: 250px;
+      // width: 250px;
       border-radius: 12px;
       overflow: hidden;
       background: white;
@@ -558,7 +657,7 @@ p{
   }
 
   .slick-list {
-    padding-left: 0px!important; 
+    // padding-left: 0px!important; 
   }
 
 }
@@ -574,8 +673,12 @@ p{
     color: #f7f9fd;
     z-index: -1;
     top: 10px;
-  }
 
+    @include max-responsive($sm){
+      font-size: 4.5em;
+    }
+  }
+  
   .page__title{
     &:after{
       content: '';
@@ -587,6 +690,10 @@ p{
       height: 3px;
       width: 80px;
       background: #0053FF;
+      
+      @include max-responsive($sm){
+        top: 75px;  
+      }
     }
   }
 
@@ -596,12 +703,18 @@ p{
     box-shadow: 0px 10px 30px #ececec;
     border-radius: 10px;
 
+    
     &::after{
       content: url(../images/svg/dots.svg);
       position: absolute;
-      bottom: -55px;
+      bottom: -45px;
       right: -70px;;
-      z-index: 2;
+      z-index: 0;
+      
+      @include max-responsive($sm){
+        bottom: -75px;
+        right: 10px;
+      }
     }
 
     .form__field{
@@ -625,53 +738,91 @@ p{
 }
 
 // 8.0 FOOTER
-footer{
+.footer{
   position: relative;
   background: $lightblue;
+  overflow: hidden;
+  min-height: 70vh;
+  
+  @include min-responsive($xlg){
+    min-height: 60vh;
+  }
+
+  &::before{
+    content: url(../images/footer-left.png);
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+
+    @include min-responsive($xlg){
+      bottom: -20%;
+    }
+  }
+
+  @include max-responsive($sm){
+    padding-top: 100px;
+  }
+
+  &__content{
+    padding-top: 50px;
+  }
 
   .brand{
-    float: left;
-    width: 25%;
-    padding-left: 10px;
-    padding-right: 10px;
+
+    @include max-responsive($sm){
+      width: 100%;
+    }
 
     .logo{
-      width: 190px;
+      width: 150px;
+      height: 50px;
     }
   }
 
   .details{
-    float: left;
-    width: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+
+    @include max-responsive($sm){
+      width: 100%;
+    }
 
     .subinfo{
 
       .item{
-        float: left;
-        width: 25%;
-        padding-left: 10px;
-        padding-right: 10px;
 
         &__title{
-          font-size: 1.6em;
-          margin-bottom: 20px;
+          font-size: 1.4em;
+          height: 50px;
+          display: flex;
+          align-items: center;
           font-weight: bold;
         }
 
         &__desc{
+          
+          p{
+            font-size: 1.1em;
+          }
 
           li{
             display: block;
             margin: 10px auto;
 
             a{
-              font-size: 1.2em;
+              font-size: 1.1em;
             }
           }
         }
       }
+    }
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+
+    p{
+      font-size: 1em;
     }
   }
 }
