@@ -80,8 +80,13 @@ p{
     font-size: 13em;
     top: -70px;
     left: -100px;
+    
     @include max-responsive($sm){
       font-size: 4.5em;
+    }
+
+    @include range-responsive($md,$lg){
+      font-size: 10em;
     }
   }
   
@@ -247,6 +252,10 @@ p{
     bottom: 40px;
     z-index: 10;
   }  
+
+  .wave__top{
+    position: absolute;
+  }
 }
 
 // 2.0 SERVICE
@@ -406,10 +415,21 @@ p{
 
     .slick-next{
       right: -4%;
+
+      @include max-responsive($sm){
+        right: 40%;
+        top: 91%;
+      }
     }
 
     .slick-prev{
       left: -4%;
+
+      @include max-responsive($sm){
+        left: 35%;
+        z-index: 20;
+        top: 91%;
+      }
     }
   }
 }
@@ -446,9 +466,13 @@ p{
     
     &.client{
       position: relative;
-      width: 100%;
+      width: 60%;
       text-align: center;
-      
+
+      @include max-responsive($sm){      
+        width: 100%;
+      }
+
       &:after{
         content: '';
         position: absolute;
@@ -463,6 +487,17 @@ p{
         @include max-responsive($sm){
           top: 38px;
           width: 70px;
+        }
+      }
+
+      &:before{
+        content: url(../images/svg/dots.svg);
+        position: absolute;
+        top: -25px;
+        left: 80px;
+
+        @include max-responsive($sm){
+          content: '';
         }
       }
     }
@@ -491,7 +526,7 @@ p{
 
   .shape{
     position: relative;
-
+    margin-bottom: 60px;
 
     &__bg{
       @include max-responsive($sm){
@@ -514,6 +549,10 @@ p{
       }
 
       .item{
+
+        &:focus{
+          outline: none !important;
+        }
 
         &__images{
           width: 180px;
@@ -560,12 +599,31 @@ p{
       }
     }
   }
+
+  .slick-dots{
+    bottom: -60px;
+    
+    li button:before{
+      font-size: 13px;
+      color: $blue !important;
+    }
+  }
+
+  .slick-prev:before, .slick-next:before{
+    color: $blue;
+    font-size: 40px;
+  }
 }
 
 // 6.0 STORIES
 .story{
   background: $lightblue;
   padding: 0;
+  min-height: 100vh;
+
+  @include min-responsive($xlg){
+    min-height: 90vh;
+  }
 
   .page__title{
 
@@ -577,6 +635,14 @@ p{
       height: 3px;
       width: 80px;
       background: #0053FF;
+
+      @include max-responsive($sm){
+        top: 38px;
+        width: 70px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
   }
 
@@ -641,6 +707,14 @@ p{
       }
     }
 
+    .slick-prev, .slick-next{
+      z-index: 2;
+    }
+
+    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
+      opacity: 0;
+    }
+
     .slick-prev:before, .slick-next:before{
       color: $blue;
       font-size: 40px;
@@ -658,6 +732,26 @@ p{
 
   .slick-list {
     // padding-left: 0px!important; 
+  }
+
+  .slick-next{
+    @include max-responsive($sm){
+      right: 20px;
+    }
+  }
+
+  .slick-prev{
+    @include max-responsive($sm){
+      left: 0;
+    }
+  }
+
+  .wave__top{
+    position: absolute;
+
+    @include max-responsive($sm){
+      position: relative;
+    }
   }
 
 }
@@ -692,7 +786,7 @@ p{
       background: #0053FF;
       
       @include max-responsive($sm){
-        top: 75px;  
+        top: 45px;  
       }
     }
   }
@@ -709,7 +803,7 @@ p{
       position: absolute;
       bottom: -45px;
       right: -70px;;
-      z-index: 0;
+      z-index: 2;
       
       @include max-responsive($sm){
         bottom: -75px;
@@ -743,11 +837,13 @@ p{
   background: $lightblue;
   overflow: hidden;
   min-height: 70vh;
-  
+
   @include min-responsive($xlg){
     min-height: 60vh;
   }
 
+
+  
   &::before{
     content: url(../images/footer-left.png);
     position: absolute;

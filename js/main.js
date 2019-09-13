@@ -10,7 +10,7 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         speed: 1000,
         focusOnSelect: true,
-
+        // infinite: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -27,7 +27,9 @@ $(document).ready(function(){
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    centerMode: false,
+                    
                 }
             },
         ]
@@ -35,10 +37,11 @@ $(document).ready(function(){
 
     // Stories Slider
     $(".stories").slick({
-        centerMode: true,
-        slidesToShow: 2,
-        arrows: false,
-        dots: true,
+        centerMode: false,
+        slidesToShow: 2.3,
+        arrows: true,
+        dots: false,
+        infinite : false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -63,4 +66,15 @@ $(document).ready(function(){
             },
         ]
     })
+
+    // Testimonial Slider
+    $(".sliderTestimonial").slick({
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        autoplay: true
+    }) 
+
+    // Wow Js
+    new WOW().init();
 })
